@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # Defines the root path route ("/")
   root "articles#index"
   resources :articles do
-    resources :comments
+    resources :comments # comments is a nested resource within articles
   end
-  # Defines the root path route ("/")
-  # root "articles#index"
 end
